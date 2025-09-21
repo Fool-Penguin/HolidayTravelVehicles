@@ -24,4 +24,9 @@ public class Salesperson {
     public void getEmpId(){
         System.out.println("Employee ID: " + empId);
     }
+
+    @Override
+    public String toString(){
+        return "Salesperson ID: " + empId + " name: " + name + " ";
+    }
 }

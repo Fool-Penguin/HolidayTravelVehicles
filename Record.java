@@ -22,4 +22,8 @@ public class Record {
     public void getRecordId(){
         System.out.println("Record ID: " + recordId);
     }
+
+    public ArrayList<Vehicle> getVehicles(){
+        return vehicles;
+    }
 }

@@ -15,7 +15,7 @@ public class Vehicle {
     private Record record;
 
     public Vehicle(int vehicleId, int serialNum, String name, String model, int year, String manufacturer, 
-                    int baseCost, ArrayList<Salesperson> salespersons, Record record){
+                    int baseCost, ArrayList<Salesperson> salespersons){
         this.vehicleId = vehicleId;
         this.serialNum = serialNum;
         this.name = name;
@@ -24,6 +24,22 @@ public class Vehicle {
         this.manufacturer = manufacturer;
         this.baseCost = baseCost;
         this.salespersons = salespersons;
+    }
+
+    public void setRecord(Record record){
         this.record = record;
+    }
+
+    public Record getRecord(){
+        return this.record;
+    }
+
+    public int getVehicleId(){
+        return this.vehicleId;
+    }
+
+    public String getInfo(){
+        return "Vehicle ID: " + vehicleId + " Serial: " + serialNum + " Name & model: " 
+                            + manufacturer + " base: " + baseCost + " Saleperson: " + salespersons.toString();
     }
 }
