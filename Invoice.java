@@ -1,4 +1,5 @@
 package HolidayTravelVehicles;
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Invoice {
@@ -10,8 +11,12 @@ public class Invoice {
     public int finalCost;
     public Date date;
     public String dealerInstallations;
+    private ArrayList<DealerInstallation> installations;
+    private Negotiation negotiation;
+    private Transaction transaction;
 
-    public Invoice(int invoiceId, int empId, int customerId, int vehicleId, int finalCost, Date date, String dealerInstallations){
+    public Invoice(int invoiceId, int empId, int customerId, int vehicleId, int finalCost, Date date, String dealerInstallations, 
+                    ArrayList<DealerInstallation> installations, Negotiation negotiation, Transaction transaction){
         this.invoiceId = invoiceId;
         this.empId = empId;
         this.customerId = customerId;
@@ -19,6 +24,8 @@ public class Invoice {
         this.finalCost = finalCost;
         this.date = date;
         this.dealerInstallations = dealerInstallations;
+        this.installations = installations;
+        this.transaction = transaction;
     }
 
     public void getInvoiceId(){

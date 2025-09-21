@@ -9,8 +9,13 @@ public class Negotiation {
     public int baseCost;
     public int finalCost;
     public String status;
-    
-    public Negotiation(int negotiateId, int customerId, int empId, int vehicleId, int baseCost, int finalCost, String status){
+    private Customer customer;
+    private Invoice invoice;
+    private Salesperson salesperson;
+    private Record record;
+
+    public Negotiation(int negotiateId, int customerId, int empId, int vehicleId, int baseCost, int finalCost, 
+                        String status, Customer customer, Invoice invoice, Salesperson salesperson, Record record){
         this.negotiateId = negotiateId;
         this.customerId = customerId;
         this.empId = empId;
@@ -18,6 +23,10 @@ public class Negotiation {
         this.baseCost = baseCost;
         this.finalCost = finalCost;
         this.status = status;
+        this.customer = customer;
+        this.invoice = invoice;
+        this.salesperson = salesperson;
+        this.record = record;
     }
 
     public void getNegotiateId(){
